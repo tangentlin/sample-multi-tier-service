@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Multi-Tier Application</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="form">
+        <input id="nameInput" class="input" />
+        <button type="button" class="submit" onclick="greet()">Greet</button>
+
+        <div id="result" class="result">Result is here</div>
+    </div>
+
+
+    <script language="JavaScript">
+        // actual api deployed to cloud may be different
+        const endpoint = 'http://localhost:3000/greeting?name=';
+
+        async function greet() {
+            const url = endpoint + document.getElementById('nameInput').value;
+            const resp = await axios.get(url);
+            const greeting = resp.data.greeting;
+            document.getElementById('result').innerText = greeting;
+        }
+    </script>
+</body>
+</html>
