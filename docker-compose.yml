@@ -2,4 +2,9 @@ version: '3'
 services:
   privateapi:
     build: ./private-api
-
+  publicapi:
+    build: ./public-api
+    ports:
+      - "3000:3000"
+    environment:
+      - private_api=http://privateapi:3000/

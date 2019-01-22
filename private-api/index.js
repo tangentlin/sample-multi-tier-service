@@ -1,5 +1,5 @@
-var express = require("express");
-var app = express();
+const express = require("express");
+const app = express();
 
 app.listen(3000, () => {
     console.log("Private API running on port 3000");
