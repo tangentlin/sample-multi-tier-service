@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <title>Sample Multi-Tier Application</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            font-size: 12pt;
+            background-color: #f2f2f2;
+        }
+
+        .form {
+            margin-top: 30vh;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .input {
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 2px;
+        }
+
+        .submit {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 2px;
+            background-color: #0099cc;
+            color: #ffffff;
+        }
+
+        .result {
+            margin-top: 30px;
+            color: #333333;
+        }
+    </style>
 </head>
 <body>
     <div class="form">
-        <input id="nameInput" class="input" />
+        <input id="nameInput" class="input" placeholder="Enter name here" />
         <button type="button" class="submit" onclick="greet()">Greet</button>
 
-        <div id="result" class="result">Result is here</div>
+        <div id="result" class="result"></div>
     </div>
 
 
